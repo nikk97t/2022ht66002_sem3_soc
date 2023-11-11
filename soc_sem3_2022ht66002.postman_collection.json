@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "537c740b-d344-4eb6-a519-0e7eac289a64",
+		"name": "soc_sem3_2022ht66002",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31098322"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "1_create_new_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"nikk\",\r\n    \"useremail\": \"nikk@nikk.me\",\r\n    \"userpassword\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{authenticationserver}}/users",
+							"host": [
+								"{{authenticationserver}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2_authenticate_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"useremail\": \"nikk@nikk.me\",\r\n    \"userpassword\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{streamingserver}}/authenticate",
+							"host": [
+								"{{streamingserver}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Podcast",
+			"item": [
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{streamingserver}}/search?s=Saree",
+							"host": [
+								"{{streamingserver}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "Saree"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stream",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{streamingserver}}/stream?podcastid={{podcastid}}",
+							"host": [
+								"{{streamingserver}}"
+							],
+							"path": [
+								"stream"
+							],
+							"query": [
+								{
+									"key": "podcastid",
+									"value": "{{podcastid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home/Library",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "apihome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiserver}}",
+					"host": [
+						"{{apiserver}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

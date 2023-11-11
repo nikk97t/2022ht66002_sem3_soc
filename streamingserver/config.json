@@ -1,0 +1,5 @@
+{
+    "database": {
+        "url": "postgres://rphjbmdc:Rx-92IfAlj4iSCKQfik1cMeo5SaNakDD@topsy.db.elephantsql.com/rphjbmdc"
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "apiserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikk97t/2022ht66002_sem3_soc.git"
+  },
+  "author": "NikhilTanni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikk97t/2022ht66002_sem3_soc/issues"
+  },
+  "homepage": "https://github.com/nikk97t/2022ht66002_sem3_soc#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "swagger-ui-express": "^5.0.0",
+    "winston": "^3.11.0"
+  }
+}
